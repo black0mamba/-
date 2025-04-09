@@ -17,7 +17,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : 
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
+  HANDLERS: (process.env.PREFIX || '^[.,#!]').trim(),
   BRANCH: "main",
   ADMIN_ACCESS: toBool(process.env.ADMIN_ACCESS) || false,
   MODE: (process.env.MODE || 'private').toLowerCase(),
@@ -28,7 +28,7 @@ module.exports = {
   MENU_URL: process.env.MENU_URL || "https://files.catbox.moe/hkqhic.jpeg",
   CAPTION: process.env.CAPTION || "Made with 🤍",
   READ_MSG: toBool(process.env.READ_MSG),
-  OWNER_NAME: process.env.OWNER_NAME || "Eʏᴘᴢ",
+  OWNER_NAME: process.env.OWNER_NAME || "snake eyes",
   BOT_NAME: process.env.BOT_NAME || "Iᴢᴜᴍɪ-ᴍᴅ",
   SUDO: process.env.SUDO || null,
   LANG: process.env.LANGUAGE === undefined ? 'EN' : process.env.LANGUAGE.toUpperCase(),
